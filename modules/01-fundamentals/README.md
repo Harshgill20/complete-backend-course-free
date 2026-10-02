@@ -132,27 +132,34 @@ Content-Type: application/json
 Authorization: Bearer jwt-token
 Cache-Control: no-cache
 ```
-Here is what each line means:
 
-Content-Type: application/json
+### Here is what each line means:
 
-   ° Meaning: Tells the receiver that the body of the message contains data formatted as JSON (JavaScript Object Notation).
+```
+**Content-Type: application/json**
 
-   ° Use case: Common in APIs when sending structured data like {"username": "alex", "age": 30}.
+ -Meaning: Tells the receiver that the body of the message contains data formatted as JSON (JavaScript Object Notation).
 
-Authorization: Bearer jwt-token
+ -Use case: Common in APIs when sending structured data like {"username": "alex", "age": 30}.
+```
 
-   ° Meaning: Authenticates the client making the request.
+```
+**'Authorization: Bearer <token>'**
 
-   ° Bearer: The authentication scheme indicating that whoever holds ("bears") this token is granted access.
+ -Meaning: Authenticates the client making the request.
 
-   ° jwt-token: A placeholder for a JSON Web Token (JWT)—a securely signed string encoding user identity and permissions.
+  -Bearer: The authentication scheme indicating that whoever holds ("bears") this token is granted access.
 
-Cache-Control: no-cache
+  -jwt-token: A placeholder for a JSON Web Token (JWT)—a securely signed string encoding user identity and permissions.
+```
 
-   ° Meaning: Directs caching mechanisms (browsers, proxies, Content Delivery Networks) to revalidate the request with the server before serving a cached response.
+```
+**Cache-Control: no-cache**
 
-   ° Use case: Ensures the client receives fresh data rather than a stale cached copy.
+ -Meaning: Directs caching mechanisms (browsers, proxies, Content Delivery Networks) to revalidate the request with the server before serving a cached response.
+
+ -Use case: Ensures the client receives fresh data rather than a stale cached copy.
+```
 
 ---
 
